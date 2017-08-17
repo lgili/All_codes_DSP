@@ -41,7 +41,13 @@ void SPI	(void);
 #endif
 
 //-- Variáveis ------------------------------------------------------------
+
 _Vsenos Vsenos;
+_Alfa_beta Alfa_beta;
+_DQ DQ;
+_Inverse_Alfa_beta Inverse_Alfa_beta;
+_Inverse_D_Q Inverse_D_Q;
+
 float teste = 0;
 
 //-- Main -----------------------------------------------------------------
@@ -92,5 +98,20 @@ void Init_Var (void) {
     Vsenos.Va =0;
     Vsenos.Vb =0;
     Vsenos.Vc =0;
+
+    Alfa_beta.Valfa=0;
+    Alfa_beta.Vbeta=0;
+
+    DQ.d = 0;
+    DQ.q = 0;
+
+    Inverse_Alfa_beta.Va=0;
+    Inverse_Alfa_beta.Vb=0;
+    Inverse_Alfa_beta.Vc=0;
+
+    Inverse_D_Q.Va=0;
+    Inverse_D_Q.Vb=0;
+    Inverse_D_Q.Vc=0;
+
 
 }

@@ -27,5 +27,44 @@ typedef struct {
 extern _Vsenos Vsenos;
 
 
+typedef struct
+{
+    float Valfa;
+    float Vbeta;
+
+} _Alfa_beta;
+
+extern _Alfa_beta Alfa_beta;
+
+typedef struct
+{
+    float d;
+    float q;
+
+} _DQ;
+
+extern _DQ DQ;
+
+typedef struct
+{
+    float Va;
+    float Vb;
+    float Vc;
+
+} _Inverse_Alfa_beta;
+
+extern _Inverse_Alfa_beta Inverse_Alfa_beta;
+
+typedef struct
+{
+    float Va;
+    float Vb;
+    float Vc;
+
+} _Inverse_D_Q;
+
+extern _Inverse_D_Q Inverse_D_Q;
+
+
 //-- Funções
 //-------------------------------------------------------------------------
