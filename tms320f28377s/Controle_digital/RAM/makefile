@@ -2,9 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS
+CG_TOOL_ROOT := /usr/local/CCS/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -35,8 +33,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -160,22 +158,22 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 28377_LIMPO.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --advice:performance=all --define=CPU1 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"28377_LIMPO.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="28377_LIMPO_linkInfo.xml" --rom_model -o "28377_LIMPO.out" $(ORDERED_OBJS)
+	"/usr/local/CCS/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --advice:performance=all --define=CPU1 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"28377_LIMPO.map" --stack_size=0x200 --warn_sections -i"/usr/local/CCS/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/lib" -i"/usr/local/CCS/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="28377_LIMPO_linkInfo.xml" --rom_model -o "28377_LIMPO.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 28377_LIMPO.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: C2000 Hex Utility'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/bin/hex2000"  -o "28377_LIMPO.hex" $(EXE_OUTPUTS__QUOTED)
+	"/usr/local/CCS/ccsv7/tools/compiler/ti-cgt-c2000_16.9.3.LTS/bin/hex2000"  -o "28377_LIMPO.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Source\0_Main.obj" "Source\1_GPIO.obj" "Source\2_ADC.obj" "Source\3_PWM.obj" "Source\4_TIMER.obj" "Source\5_ISR.obj" "Source\6_SPI.obj" "Source\F2837xS_CodeStartBranch.obj" "Source\F2837xS_DefaultISR.obj" "Source\F2837xS_GlobalVariableDefs.obj" "Source\F2837xS_Gpio.obj" "Source\F2837xS_PieCtrl.obj" "Source\F2837xS_PieVect.obj" "Source\F2837xS_SysCtrl.obj" "Source\F2837xS_usDelay.obj" "Source\LCD_SPI.obj" 
-	-$(RM) "Source\0_Main.d" "Source\1_GPIO.d" "Source\2_ADC.d" "Source\3_PWM.d" "Source\4_TIMER.d" "Source\5_ISR.d" "Source\6_SPI.d" "Source\F2837xS_DefaultISR.d" "Source\F2837xS_GlobalVariableDefs.d" "Source\F2837xS_Gpio.d" "Source\F2837xS_PieCtrl.d" "Source\F2837xS_PieVect.d" "Source\F2837xS_SysCtrl.d" "Source\LCD_SPI.d" 
-	-$(RM) "Source\F2837xS_CodeStartBranch.d" "Source\F2837xS_usDelay.d" 
+	-$(RM) "Source/0_Main.obj" "Source/1_GPIO.obj" "Source/2_ADC.obj" "Source/3_PWM.obj" "Source/4_TIMER.obj" "Source/5_ISR.obj" "Source/6_SPI.obj" "Source/F2837xS_CodeStartBranch.obj" "Source/F2837xS_DefaultISR.obj" "Source/F2837xS_GlobalVariableDefs.obj" "Source/F2837xS_Gpio.obj" "Source/F2837xS_PieCtrl.obj" "Source/F2837xS_PieVect.obj" "Source/F2837xS_SysCtrl.obj" "Source/F2837xS_usDelay.obj" "Source/LCD_SPI.obj" 
+	-$(RM) "Source/0_Main.d" "Source/1_GPIO.d" "Source/2_ADC.d" "Source/3_PWM.d" "Source/4_TIMER.d" "Source/5_ISR.d" "Source/6_SPI.d" "Source/F2837xS_DefaultISR.d" "Source/F2837xS_GlobalVariableDefs.d" "Source/F2837xS_Gpio.d" "Source/F2837xS_PieCtrl.d" "Source/F2837xS_PieVect.d" "Source/F2837xS_SysCtrl.d" "Source/LCD_SPI.d" 
+	-$(RM) "Source/F2837xS_CodeStartBranch.d" "Source/F2837xS_usDelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

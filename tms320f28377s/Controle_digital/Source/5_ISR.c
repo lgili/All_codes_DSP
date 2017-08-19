@@ -12,7 +12,7 @@
 
 
 
-__interrupt void pwm1_isr(void);      // Interrupção PWM para o retificador
+__interrupt void pwm1_isr(void);      // Interrupï¿½ï¿½o PWM para o retificador
 
 /* function declaration */
 void max(float *num1, float *num2, float *num3);
@@ -37,10 +37,10 @@ float ret;
 
 //-- ISR ------------------------------------------------------------------
 void ISR (void) {
-    //-- Configurações Individuais Periféricos --------------------------------
+    //-- Configuraï¿½ï¿½es Individuais Perifï¿½ricos --------------------------------
 
 
-    //-- Populaciona o vetor PIE com o endereço das ISR -----------------------
+    //-- Populaciona o vetor PIE com o endereï¿½o das ISR -----------------------
     EALLOW;
     //PieVectTable.XXX= &XXX;   // Int XXX
     PieVectTable.EPWM1_INT = &pwm1_isr;
@@ -48,14 +48,14 @@ void ISR (void) {
     EDIS;
 
 
-    //-- Habilita as Interupções Desejadas (PIE) ------------------------------
+    //-- Habilita as Interupï¿½ï¿½es Desejadas (PIE) ------------------------------
     PieCtrlRegs.PIEACK.all  = 0xFFFF;       // Reseta o bit de acknowledgement
     PieCtrlRegs.PIEIER3.bit.INTx1 = 1;      // HAB. INT. ADC1
 
     //PieCtrlRegs.PIEIERXXX.bit.INTxXXX = 1;    //HAB. INT. XXX
 
 
-    //-- Habilita as Interupções no CPU ---------------------------------------
+    //-- Habilita as Interupï¿½ï¿½es no CPU ---------------------------------------
     //IER |= M_INTX;    // Enable CPU Interrupt X
 
 
@@ -95,6 +95,7 @@ interrupt void pwm1_isr(void)
    Vsenos.Vb = sin(theta - 2*pi/3);
    Vsenos.Vc = sin(theta + 2*pi/3);
 
+   // adicionando para testa git
 
  //  alfa = 0.66667 * (Vsenos.Va - Vsenos.Vb *0.5 - Vsenos.Vc *0.5);
   // beta = 0.66667 * (rtsd * Vsenos.Vb - rtsd*Vsenos.Vc);
